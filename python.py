@@ -11,7 +11,7 @@ while not breaker:
     option = f.get_option()
     
     if option == 1:
-        print("")
+        f.add_student(students)
     elif option == 2:
         print("")
     elif option == 3:

@@ -37,6 +37,11 @@ def add_student(students):
     students.append(create_student(name, age, grade))
     print("Estudiante agregado correctamente.")
 
+def get_student(name, students):
+    for student in students:
+        if (student == name):
+            return students.index(student)
+        return -1
 
 def create_student(name, age, grade):
     return {
@@ -53,7 +58,7 @@ def valid_name(name):
 
 def valid_age(age):
     try:
-        if int(age) < 0:
+        if int(age) <= 0:
             return False
         return True
     except ValueError:
